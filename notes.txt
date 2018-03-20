@@ -1,0 +1,34 @@
+
+cd ..
+cd "Mine/source/pluralSite/vuespa05"
+
+git clone https://github.com/MichellePrograms/vuespa05.git
+
+npm install --save axios@0.16.2
+
+npm install eslint-plugin-react --save-dev
+
+Module build failed: Error: Cannot find module 
+'eslint-config-defaults/configurations/eslint'
+
+copied over files from the 02 version of project
+
+
+
+Promises
+Rapid ES 6 course in pluralsight
+or
+Getting started with progressive web apps in pluralsight
+
+categoryId of 2 is the front end main posts
+categoryId of 11 is the mobile posts
+ loadPosts () {
+        let categoryId = 2
+        if (this.id === 'mobile') {
+          categoryId = 11
+        }
+        appService.getPosts(categoryId).then(data => {
+          this.posts = data
+        })
+
+
