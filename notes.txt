@@ -3,6 +3,13 @@ cd ..
 cd "Mine/source/pluralSite/vuespa05"
 
 git clone https://github.com/MichellePrograms/vuespa05.git
+Mine@LAPTOP-TBDKICKK MINGW64 ~/source/pluralSite/vuespa05 (master)
+$ git config user.email "it@petersonprograms.info"
+
+Mine@LAPTOP-TBDKICKK MINGW64 ~/source/pluralSite/vuespa05 (master)
+$ git config user.name "MichellePrograms"
+
+
 
 npm install --save axios@0.16.2
 
@@ -12,7 +19,7 @@ Module build failed: Error: Cannot find module
 'eslint-config-defaults/configurations/eslint'
 
 copied over files from the 02 version of project
-
+errors went away
 
 
 Promises
@@ -32,3 +39,4 @@ categoryId of 11 is the mobile posts
         })
 
 
+usr bill pwd vuejs
