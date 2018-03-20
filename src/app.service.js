@@ -2,7 +2,13 @@ import axios from 'axios'
 
 axios.defaults.baseURL = 'https://api.fullstackweekly.com'
 
+//  interceptor allows filter of request/results in central place
+//  interceptor adds the token to every request
 axios.interceptors.request.use(function (config) {
+  // for checking if code is running on server add this check to change js behavior
+  if (typeof window === 'undefined') {
+    return config
+  }
   const token = window.localStorage.getItem('token')
   if (token) {
     config.headers.Authorization = `Bearer ${token}`
@@ -22,13 +28,7 @@ const appService = {
   },
   getProfile () {
     return new Promise((resolve) => {
-      axios.get('/services/profile.php',
-        {
-          headers: {
-            'Authorization': `Bearer ${window.localStorage.getItem('token')}`
-          }
-        }
-      )
+      axios.get('/services/profile.php')
         .then(response => {
           resolve(response.data)
         })
